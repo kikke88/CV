@@ -21,12 +21,14 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
+
+%\usepackage{fontspec}
+
 \usepackage[utf8]{inputenc}
 
 \usepackage[export]{adjustbox}
 
 \usepackage{multicol}
-
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
@@ -53,71 +55,49 @@
 
 \hrulefill
 
-
-
 \section{Personal Information}
-  \cvitem{Mobile}{+7-985-256-07-87}
   \cvitem{Email}{kikke88@yandex.ru}
   \cvitem{GitHub}{kikke88}
 
-
 \section{Education}
-    \cvitem{2016 -- 2020}
-    {\textbf{Moscow State University }\newline 
+\cvitem{}{
+    \textbf{Moscow State University}\newline 
     Faculty of Computational Mathematics and Cybernetics\newline 
-    Department of Supercomputers and Quantum Informatics\newline 
-    GPA 4.75 / 5.0}
-
-
+    Department of Supercomputers and Quantum Informatics
+    \begin{itemize}
+        \item Bachelor's degree, 2016 -- 2020, GPA 4.75 / 5.0
+        \item Master's degree, 2020 -- until now
+    \end{itemize}
+    }
 \section{Technical skills}
     \cvitem{General}{Data structures, Algorithms, Object-oriented programming,\newline Basic knowledge of the Linux/Unix operating system}
-    \cvitem{Languages}{C/C++, Python}
-    \cvitem{Libraries}{MPI, OpenMP, PAPI, POSIX Threads, FFTW, Numpy, OpenGL, CUDA}
-    \cvitem{Technologies}{Git, Travis-CI, Redis, RabbitMQ}
+    \cvitem{Languages}{C++, Python}
+    \cvitem{Libraries}{+: MPI, OpenMP, Numpy\newline +-: CUDA, PAPI, POSIX Threads, FFTW}
+    \cvitem{Technologies}{Git, Redis, RabbitMQ}
 
 \section{Strengths}
-    \cvitem{}{Hard-working, Communication, English(Intermediate)}
+    \cvitem{}{Hard-working, Communication, English (Intermediate)}
     \cvitem{}{Time Management, Critical Thinking}
 
 
-\section{Projects}
-\renewcommand{\listitemsymbol}{\textcolor{black}{o~}}
-\cvlistitem{\textbf{Finite fields and BCH codes}
-    \newline - Basic operations in $F_2^q$
-    \newline - Basic operations for working with polynomials in $F_2^q$
-    \newline - Systematic coding procedure for cyclic code defined by its generating polynomial
-    \newline - Procedure of decoding the BCH code using the PGZ method and method based on the extended Euclid algorithm.
+\section{Computer practicum projects} {
+    \small
+	\cvlistitem{\textbf{Finite fields and BCH codes} - Basic operations for working with polynomials in $F_2^q$. Systematic coding procedure for cyclic code defined by its generating polynomial. Procedure of decoding the BCH code using the PGZ method and method based on the extended Euclid algorithm.
+    }
+    \cvlistitem{\textbf{Realization of quantum gates and algorithms} - n-Hadamard, Phase-shift, NOT, CNOT, CPhase-shift gates, Quantum Fourier transform.
+    }
+    \cvlistitem{\textbf{Syntax analyzer} - Implemented by recursive descendant method. Defining types of all subexpressions. Detects lexical, syntactic and semantic errors.
+    }
+    \cvlistitem{\textbf{E-store} - Storing information in Redis data structures. Messages are forwarded via RabbitMQ. The buyer can view the goods, add to the cart, see the statistics, in the end get the shopping done.
+    }
+    \cvlistitem{\textbf{Numerical solution of the equations of change in the magnetic field} - Using an explicit schema in calculations. Calculating a multidimensional Fourier transform using the FFTW library. Implementation of div, rot, and derivate calculations.
+    }
+    \cvlistitem{\textbf{Parallel implementation of operations with grid data on an unstructured grid } - Mastering basic data structures to represent an unstructured grid, a graph of connections of calculated cells, a portrait of a sparse matrix, multithreaded and multiprocessor parallelization of the simplest operations.
+    }
 }
-\cvlistitem{\textbf{Realization of quantum gates and algorithms}
-    \newline - Hadamard gate with noise, fidelity measurement
-    \newline - Hadamard, n-Hadamard, Phase-shift, NOT, CNOT, CPhase-shift gates
-    \newline - Quantum Fourier transform
-}
-\cvlistitem{\textbf{Syntax analyzer}
-    \newline - Implemented by recursive descendant method
-    \newline - Defining types of all subexpressions
-    \newline - Detects lexical, syntactic and semantic errors
-}
-
-\cvlistitem{\textbf{E-store}
-    \newline - Storing information in Redis data structure.
-    \newline - Messages are forwarded via RabbitMQ.\newline(Client <---> RabbitMQ <---> Store logic <---> Redis)
-    \newline - The buyer can view the goods, add to the cart, see the statistics, in the end get the shopping done.
-}
-
-\cvlistitem{\textbf{Numerical solution of the equations of change in the magnetic field}
-    \newline - Using an explicit schema in calculations
-    \newline - Calculating a multidimensional Fourier transform using the FFTW library
-    \newline - Implementation of div, rot, and derivate calculations
-}
-\clearpage
-
 \section {Interests and researches}
     \subsection{Graduate qualification work}
     	\cvitem{}{Development of the method for weak scalability predicting of supercomputer applications}
     \subsection{Scientific interests}
-    	\cvitem{}{Parallel and High Performance Computing}
-    	\cvitem{}{Quantum computing}
-    	\cvitem{}{GPU computing}
-
+    	\cvitem{}{Parallel and High Performance Computing, Quantum computing, GPU computing}
 \end{document}
